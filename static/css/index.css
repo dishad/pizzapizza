@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css?family=Kaushan+Script');
+
+.header-wrapper {
+	width: 100%;
+	height: 131px;
+	border: none;
+	background-color: #fff;
+}
+
+.inner-header-wrapper {
+	position: relative;
+}
+
+.stripe-image {
+	width: 100%;
+	height: 305px;
+	background: #c77751 url(../imgs/slice.jpg) no-repeat center center;
+    background-size: cover;
+	line-height: 16px;
+}
+
+.business-name {
+    font-family: 'Kaushan Script', cursive;
+	letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #343e44;
+    font-size: 32px;
+    margin-bottom: 5px;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	margin-top: 0;
+}
+
+.b_header {
+    padding: 50px 150px 20px;
+}
+
+.business-address {
+    font-family: "HelveticaNeueLTStd", Helvetica, sans-serif;
+    font-size: 15px;
+    line-height: 16px;
+}
+
+.business-content {
+    padding: 60px 150px 0;
+}
+
+.header-button {
+    border-radius: 3px;
+    cursor: pointer;
+    display: block;
+    font-family: "HelveticaNeueLTStd", Helvetica, sans-serif;
+    font-size: 16px;
+    height: 44px;
+    letter-spacing: .2px;
+    line-height: 2.9;
+    margin: 0 auto;
+    max-width: 260px;
+    text-align: center;
+    text-decoration: none;
+    background-color: #6b9ac0;
+    border: 0;
+    color: #ffffff;
+    width: 180px;
+	position: absolute;
+	bottom: 0;
+	top: auto;
+	right: 0;
+}
+
+.header-button:hover {
+	background-color: #5e84a3;
+	color: #fff;
+	text-decoration: none;
+}

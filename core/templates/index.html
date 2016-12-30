@@ -5,25 +5,18 @@
 {% block title %}Home | {{ block.super }}{% endblock %}
 
 {% block content %}
-	<nav class="navbar navbar-default navbar-fixed-top">
-		<div class="container">
-			<div class="navbar-header">
-				<a class="navbar-brand" href="#">Ridgeway Pizza</a>
-			</div>
-			<ul class="nav navbar-nav navbar-right">
-				<li class="nav-item">
-					<a class="nav-link" href="#">My Profile</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#">Account</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#">Help</a>
-				</li>
-			</ul>
+	<div class='header-wrapper b_header'>
+		<div class='inner-header-wrapper'>
+			<h1 class='business-name'>Ridgeway Pizza</h1>
+			<p class='business-address'>2802 Summer Street, Stamford CT, 06905</p>
+			<a class='header-button' href='#'>Full Menu</a>
 		</div>
-	</nav>
-
-	<div class="container">
 	</div>
+	<div class='stripe-image'></div>
+	<div class='business-content'>
+		<div class='popular-items'></div>
+		<div class='business-details'></div>
+	</div>
+
+    <link rel='stylesheet' type='text/css' href="{% static 'css/index.css' %}" />
 {% endblock %}
