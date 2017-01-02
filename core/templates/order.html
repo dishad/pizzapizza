@@ -1,0 +1,49 @@
+{% extends 'template.html' %}
+
+{% load static %}
+
+{% block title %}Order | {{ block.super }}{% endblock %}
+
+{% block content %}
+	<div class='image-stripe'>
+		<div class='info-header'>
+			<h1 class='business-name order-name'>Ridgeway Pizza</h1>
+			<span class='business-address'>2802 Summer Street, Stamford CT, 06905 - 203-323-7777</span>
+		</div>
+		<div class='delivery-details-wrapper'>			
+			<div class='delivery-details'>
+				<span class='delivery-item'>30 - 45 min
+				<h4 class='delivery-desc'>Wait time</h4>
+				</span>
+				<span class='delivery-item'>$12 - $20
+				<h4 class='delivery-desc'>Minimum</h4>
+				</span>
+				<span class='delivery-item'>Free
+				<h4 class='delivery-desc'>Delivery</h4>
+				</span>
+			</div>
+		</div>
+	</div>
+	<div class='shop-content'>
+		<div class='menu-items'>
+			<div class='food-header'>Pizza</div>
+			<div class='food-header'>Gourmet Pizza</div>
+			<div class='food-header'>Appetizers</div>
+			<div class='food-header'>Wings</div>
+			<div class='food-header'>Salads</div>
+			<div class='food-header'>Soups</div>
+			<div class='food-header'>Calzones & Strombolis</div>
+			<div class='food-header'>Grinders</div>
+			<div class='food-header'>Wraps</div>
+			<div class='food-header'>Pasta Dishes</div>
+			<div class='food-header'>Entrees</div>
+			<div class='food-header'>Desserts</div>
+			<div class='food-header'>Extras</div>
+			<div class='food-header'>Beverages</div>
+		</div>
+		<div class='cart-content'>
+		</div>
+	</div>
+	<link rel='stylesheet' type='text/css' href="{% static 'css/index.css' %}"/>
+{% endblock %}
+

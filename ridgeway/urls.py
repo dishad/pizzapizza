@@ -22,5 +22,6 @@ import core.views
 
 urlpatterns = [
 	url(r'^$', core.views.index),
+	url(r'^order/', core.views.order),
     url(r'^admin/', admin.site.urls)
 ]

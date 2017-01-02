@@ -219,7 +219,102 @@ div {
     width: 15px;
 }
 
+.image-stripe {
+    background: #9ea1a7 url(../imgs/slice2.jpg) no-repeat top left;
+    background-size: cover;
+    color: #ffffff;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-height: 254px;
+    padding-top: 40px;
+    position: relative;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+	padding-top: 60px;
+}
+
+.info-header {
+	padding: 0 150px;
+    text-align: left;
+	margin-bottom: 30px;
+	width: 100%;
+}
+
+.delivery-details {
+	text-align: left;
+	padding: 9px 150px;
+    -ms-flex-pack: start;
+    -webkit-justify-content: flex-start;
+    -webkit-box-pack: start;
+    justify-content: flex-start;
+	display: flex;
+}
+
+.delivery-item {
+	color: #ffffff;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    padding-right: 40px;
+    text-align: center;
+
+}
+
+.delivery-desc {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+	font-family: 'Oswald', sans-serif;    
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #9db2c3;
+    font-size: 13px;
+    margin: 0;
+}
+
+.delivery-details-wrapper {
+    background: linear-gradient(rgba(52,62,68,0.7), rgba(52,62,68,0.7));
+    margin-top: auto;
+    width: 100%;
+}
+
+.order-name {
+	color: #fff;
+	margin-bottom: 20px;
+}
+
+.shop-content {
+	display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -ms-flex-pack: justify;
+    -webkit-justify-content: space-between;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    margin: 20px auto;
+	padding: 0 150px;
+}
+
+.menu-items {
+	-webkit-box-flex: 2;
+    -webkit-flex: 2 650px;
+    -ms-flex: 2 650px;
+    flex: 2 650px;
+	margin-right: 100px;
+}
+
 ol, li, ul {
+
 	padding-left: 0;
     list-style: none;
 }
