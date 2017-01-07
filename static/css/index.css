@@ -1,18 +1,32 @@
 @import url('https://fonts.googleapis.com/css?family=Kaushan+Script|Oswald');
 
+html, body, article {
+	margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+	position: relative;
+}
+
 .header-wrapper {
 	width: 100%;
-	height: 131px;
+	height: 192px;
 	border: none;
-	background-color: #fff;
+	padding-top: 15px;
+	background: #24201F url(../imgs/header2.png) no-repeat center;
+	align-content: center;
 }
 
 .inner-header-wrapper {
+	width: 100%;
 	position: relative;
 }
 
 .inner-business-content {
 	position: relative;
+	height: 100%;
 }
 
 .stripe-image {
@@ -36,30 +50,37 @@
 }
 
 .b_header {
-    padding: 50px 150px 20px;
+    padding: 135px 285px 20px;
+
 }
 
 .business-address {
 	font-family: 'Oswald', sans-serif;    
     font-size: 15px;
     line-height: 16px;
+	color: #fff;
 }
 
 .business-content {
     padding: 60px 150px 0;
 	position: relative;
+	height: 100%;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
 }
 
 .header-button {
     border-radius: 3px;
     cursor: pointer;
     display: block;
-    font-size: 16px;
-    height: 44px;
-    letter-spacing: .2px;
-    line-height: 2.9;
+    font-size: 20px;
+	font-family: 'Oswald', sans-serif;    
+    height: 33px;
+    letter-spacing: .5px;
+    line-height: 1.7;
     margin: 0 auto;
-    max-width: 260px;
+    max-width: 160px;
     text-align: center;
     text-decoration: none;
     background-color: #76EE00;
@@ -80,8 +101,10 @@
 
 .popular-items {
     margin: 0;
-    padding: 0 100px 0 0;
-	width: 605px;
+	padding: 0;
+	width: 505px;
+	display: inline-block;
+	vertical-align: top;
 }
 
 .business-details {
@@ -90,7 +113,7 @@
     font-size: 16px;
 	width: 381px;
     padding: 25px 20px 30px;
-	position: absolute;
+	display: inline-block;
 	right: 0;
 	top: 0;
 	box-sizing: border-box;
@@ -220,7 +243,7 @@ div {
 }
 
 .image-stripe {
-    background: #9ea1a7 url(../imgs/slice2.jpg) no-repeat top left;
+    background: #9ea1a7 url(../imgs/header3.png) no-repeat top left;
     background-size: cover;
     color: #ffffff;
     -webkit-box-orient: vertical;
@@ -228,7 +251,7 @@ div {
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
-    min-height: 254px;
+    min-height: 240px;
     padding-top: 40px;
     position: relative;
     width: 100%;
@@ -269,6 +292,15 @@ div {
     text-align: center;
 
 }
+
+.delivery-number {
+	margin-top: auto;
+	margin-left: auto;
+	font-size: 18px;
+	line-height: 1.7;
+}
+
+
 
 .delivery-desc {
     -webkit-font-smoothing: antialiased;
