@@ -28,24 +28,216 @@
 	</div>
 	<div class='shop-content'>
 		<div class='menu-items'>
-			<div class='food-header'>Pizza</div>
-			<div class='food-header'>Gourmet Pizza</div>
-			<div class='food-header'>Appetizers</div>
-			<div class='food-header'>Wings</div>
-			<div class='food-header'>Salads</div>
-			<div class='food-header'>Soups</div>
-			<div class='food-header'>Calzones & Strombolis</div>
-			<div class='food-header'>Grinders</div>
-			<div class='food-header'>Wraps</div>
-			<div class='food-header'>Pasta Dishes</div>
-			<div class='food-header'>Entrees</div>
-			<div class='food-header'>Desserts</div>
-			<div class='food-header'>Extras</div>
-			<div class='food-header'>Beverages</div>
+			<div class='accordion'>
+				<h3 class='food-header'>Pizza</h3>
+			</div>
+			<div class='panel'>
+			{% for item in menu_item %}
+				{% if item.category == "Pizza" %}	
+				<div class='dj-menu-item'>
+				<p class='menu-item-name'>{{ item.name }}</p>
+				<p class='menu-item-desc'>{{ item.description }} </p>
+				</div>
+				<div class='product-options-wrapper'>
+					{% for size in item.sizes.all %}
+					<div class='product-options'>
+					<p>{{size.size}}</p>
+					{% endfor %}
+					{% for price in item.prices.all %}
+					<p>{{price.price}}</p>
+					{% endfor %}
+				</div>
+				{% endif %}
+			{% endfor %}
+			</div>
+			<div class='accordion'>
+				<h3 class='food-header'>Gourmet Pizza</h3>
+			</div>
+			<div class='panel'>
+			{% for item in menu_item %}
+				{% if item.category == "Gourmet Pizzas" %}	
+				<div class='dj-menu-item'>
+				<p class='menu-item-name'>{{ item.name }}</p>
+				<p class='menu-item-desc'>{{ item.description }} </p>
+				</div>
+				{% endif %}
+			{% endfor %}
+			</div>
+			<div class='accordion'>
+				<h3 class='food-header'>Appetizers</h3>
+			</div>
+			<div class='panel'>
+			{% for item in menu_item %}
+				{% if item.category == "Appetizers" %}	
+				<div class='dj-menu-item'>
+				<p class='menu-item-name'>{{ item.name }}</p>
+				<p class='menu-item-desc'>{{ item.description }} </p>
+				</div>
+				{% endif %}
+			{% endfor %}
+			</div>
+			<div class='accordion'>
+				<h3 class='food-header'>Wings</h3>
+			</div>
+			<div class='panel'>
+			{% for item in menu_item %}
+				{% if item.category == "Wings" %}	
+				<div class='dj-menu-item'>
+				<p class='menu-item-name'>{{ item.name }}</p>
+				<p class='menu-item-desc'>{{ item.description }} </p>
+				</div>
+				{% endif %}
+			{% endfor %}
+			</div>
+			<div class='accordion'>
+				<h3 class='food-header'>Salads</h3>
+			</div>
+			<div class='panel'>
+			{% for item in menu_item %}
+				{% if item.category == "Salads" %}	
+				<div class='dj-menu-item'>
+				<p class='menu-item-name'>{{ item.name }}</p>
+				<p class='menu-item-desc'>{{ item.description }} </p>
+				</div>
+				{% endif %}
+			{% endfor %}
+			</div>
+			<div class='accordion'>
+				<h3 class='food-header'>Soups</h3>
+			</div>
+			<div class='panel'>
+			{% for item in menu_item %}
+				{% if item.category == "Soups" %}	
+				<div class='dj-menu-item'>
+				<p class='menu-item-name'>{{ item.name }}</p>
+				<p class='menu-item-desc'>{{ item.description }} </p>
+				</div>
+				{% endif %}
+			{% endfor %}
+			</div>
+			<div class='accordion'>
+				<h3 class='food-header'>Calzones</h3>
+			</div>
+			<div class='panel'>
+			{% for item in menu_item %}
+				{% if item.category == "Calzones" %}	
+				<div class='dj-menu-item'>
+				<p class='menu-item-name'>{{ item.name }}</p>
+				<p class='menu-item-desc'>{{ item.description }} </p>
+				</div>
+				{% endif %}
+			{% endfor %}
+			</div>
+			<div class='accordion'>
+				<h3 class='food-header'>Strombolis</h3>
+			</div>
+			<div class='panel'>
+			{% for item in menu_item %}
+				{% if item.category == "Strombolis" %}	
+				<div class='dj-menu-item'>
+				<p class='menu-item-name'>{{ item.name }}</p>
+				<p class='menu-item-desc'>{{ item.description }} </p>
+				</div>
+				{% endif %}
+			{% endfor %}
+			</div>
+			<div class='accordion'>
+				<h3 class='food-header'>Grinders</h3>
+			</div>
+			<div class='panel'>
+			{% for item in menu_item %}
+				{% if item.category == "Grinders" %}	
+				<div class='dj-menu-item'>
+				<p class='menu-item-name'>{{ item.name }}</p>
+				<p class='menu-item-desc'>{{ item.description }} </p>
+				</div>
+				{% endif %}
+			{% endfor %}
+			</div>
+			<div class='accordion'>
+				<h3 class='food-header'>Wraps</h3>
+			</div>
+			<div class='panel'>
+			{% for item in menu_item %}
+				{% if item.category == "Wraps" %}	
+				<div class='dj-menu-item'>
+				<p class='menu-item-name'>{{ item.name }}</p>
+				<p class='menu-item-desc'>{{ item.description }} </p>
+				</div>
+				{% endif %}
+			{% endfor %}
+			</div>
+			<div class='accordion'>
+				<h3 class='food-header'>Pasta Dishes</h3>
+			</div>
+			<div class='panel'>
+			{% for item in menu_item %}
+				{% if item.category == "Pasta Dishes" %}	
+				<div class='dj-menu-item'>
+				<p class='menu-item-name'>{{ item.name }}</p>
+				<p class='menu-item-desc'>{{ item.description }} </p>
+				</div>
+				{% endif %}
+			{% endfor %}
+			</div>
+			<div class='accordion'>
+				<h3 class='food-header'>Entrees</h3>
+			</div>
+			<div class='panel'>
+			{% for item in menu_item %}
+				{% if item.category == "Entrees" %}	
+				<div class='dj-menu-item'>
+				<p class='menu-item-name'>{{ item.name }}</p>
+				<p class='menu-item-desc'>{{ item.description }} </p>
+				</div>
+				{% endif %}
+			{% endfor %}
+			</div>
+			<div class='accordion'>
+				<h3 class='food-header'>Desserts</h3>
+			</div>
+			<div class='panel'>
+			{% for item in menu_item %}
+				{% if item.category == "Desserts" %}	
+				<div class='dj-menu-item'>
+				<p class='menu-item-name'>{{ item.name }}</p>
+				<p class='menu-item-desc'>{{ item.description }} </p>
+				</div>
+				{% endif %}
+			{% endfor %}
+			</div>
+			<div class='accordion'>
+				<h3 class='food-header'>Extras</h3>
+			</div>
+			<div class='panel'>
+			{% for item in menu_item %}
+				{% if item.category == "Extras" %}	
+				<div class='dj-menu-item'>
+				<p class='menu-item-name'>{{ item.name }}</p>
+				<p class='menu-item-desc'>{{ item.description }} </p>
+				</div>
+				{% endif %}
+			{% endfor %}
+			</div>
+			<div class='accordion'>
+				<h3 class='food-header'>Beverages</h3>
+			</div>
+			<div class='panel'>
+			{% for item in menu_item %}
+				{% if item.category == "Beverages" %}	
+				<div class='dj-menu-item'>
+				<p class='menu-item-name'>{{ item.name }}</p>
+				<p class='menu-item-desc'>{{ item.description }} </p>
+				</div>
+				{% endif %}
+			{% endfor %}	
+			</div>
 		</div>
 		<div class='cart-content'>
 		</div>
 	</div>
 	<link rel='stylesheet' type='text/css' href="{% static 'css/index.css' %}"/>
+	<link rel='stylesheet' type='text/css' href="{% static 'css/order.css' %}"/>
+	<script src="{% static 'scripts/main.js' %}"></script>
 {% endblock %}
 

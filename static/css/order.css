@@ -1,0 +1,106 @@
+.food-header {
+	margin: 0;
+	display: inline-block;
+	font-family: 'Oswald', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.accordion {
+    color: #444;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+	padding-top: 20px;
+	padding-bottom: 10px;
+    border-bottom: 1px solid;
+}
+	
+.accordion:after {
+    content: '\02796'; /* Unicode character for "plus" sign (+) */
+    font-size: 24px;
+    color: #777;
+    float: right;
+    margin-left: 5px;
+	display: inline-block;
+}
+
+.accordion.active:after {
+    content: "\2795"; /* Unicode character for "minus" sign (-) */
+}
+.panel {
+    margin-top: 10px;
+	background-color: white;
+    display: block;
+}
+
+.panel.show {
+	display: none!important;
+}
+
+.menu-item-name {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 18px;
+    margin: 0 0 10px;
+}
+
+.menu-item-desc {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    line-height: 18px;
+}
+
+.dj-menu-item {
+    border-bottom: 1px solid #e4e5e7;
+    padding: 20px 0;
+}
+
+.product-options-wrapper {
+    cursor: pointer;
+}
+
+.product-options {
+	-webkit-box-direction: normal;
+    -webkit-box-orient: horizontal;
+    -moz-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    background-color: transparent;
+    border: 0;
+    margin: 0 0 10px;
+    text-align: right;
+    width: auto;
+}
+
+.product-size {
+	-webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    font-size: 13px;
+    margin-right: 10px;
+    text-align: right;
+}
+
+.product-price {
+	border-radius: 3px;
+    cursor: pointer;
+    display: block;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    height: 44px;
+    letter-spacing: .2px;
+    line-height: 2.9;
+    margin: 0 auto;
+    max-width: 260px;
+    text-align: center;
+    text-decoration: none;
+    background: #ffffff;
+    border: 1px solid #6b9ac0;
+    color: #6b9ac0;
+    width: 110px;
+}
