@@ -34,18 +34,24 @@
 			<div class='panel'>
 			{% for item in menu_item %}
 				{% if item.category == "Pizza" %}	
+				<div class='shop-product'>
 				<div class='dj-menu-item'>
 				<p class='menu-item-name'>{{ item.name }}</p>
 				<p class='menu-item-desc'>{{ item.description }} </p>
 				</div>
+				<div class='product-spacer'></div>
 				<div class='product-options-wrapper'>
-					{% for size in item.sizes.all %}
-					<div class='product-options'>
-					<p>{{size.size}}</p>
-					{% endfor %}
 					{% for price in item.prices.all %}
-					<p>{{price.price}}</p>
+					<div class='product-options'>
+						<div class='product-size'>
+							<p>{{price.size}}</p>
+						</div>
+						<div class='product-price'>
+							<p>{{price.price}}</p>
+						</div>
+					</div>
 					{% endfor %}
+				</div>
 				</div>
 				{% endif %}
 			{% endfor %}
@@ -56,9 +62,25 @@
 			<div class='panel'>
 			{% for item in menu_item %}
 				{% if item.category == "Gourmet Pizzas" %}	
+				<div class='shop-product'>
 				<div class='dj-menu-item'>
 				<p class='menu-item-name'>{{ item.name }}</p>
 				<p class='menu-item-desc'>{{ item.description }} </p>
+				</div>
+				<div class='product-spacer'></div>
+				<div class='product-options-wrapper'>
+					{% for price in item.prices.all %}
+					<div class='product-options'>
+						<div class='product-size'>
+							<p>{{price.size}}</p>
+						</div>
+						<div class='product-price'>
+							<p>{{price.price}}</p>
+						</div>
+					</div>
+					{% endfor %}
+				</div>
+	
 				</div>
 				{% endif %}
 			{% endfor %}
@@ -69,9 +91,25 @@
 			<div class='panel'>
 			{% for item in menu_item %}
 				{% if item.category == "Appetizers" %}	
+				<div class='shop-product'>
 				<div class='dj-menu-item'>
 				<p class='menu-item-name'>{{ item.name }}</p>
 				<p class='menu-item-desc'>{{ item.description }} </p>
+				</div>
+				<div class='product-spacer'></div>
+				<div class='product-options-wrapper'>
+					{% for price in item.prices.all %}
+					<div class='product-options'>
+						<div class='product-size'>
+							<p>{{price.size}}</p>
+						</div>
+						<div class='product-price'>
+							<p>{{price.price}}</p>
+						</div>
+					</div>
+					{% endfor %}
+				</div>
+	
 				</div>
 				{% endif %}
 			{% endfor %}
@@ -82,9 +120,25 @@
 			<div class='panel'>
 			{% for item in menu_item %}
 				{% if item.category == "Wings" %}	
+				<div class='shop-product'>
 				<div class='dj-menu-item'>
 				<p class='menu-item-name'>{{ item.name }}</p>
 				<p class='menu-item-desc'>{{ item.description }} </p>
+				</div>
+				<div class='product-spacer'></div>
+				<div class='product-options-wrapper'>
+					{% for price in item.prices.all %}
+					<div class='product-options'>
+						<div class='product-size'>
+							<p>{{price.size}}</p>
+						</div>
+						<div class='product-price'>
+							<p>{{price.price}}</p>
+						</div>
+					</div>
+					{% endfor %}
+				</div>
+	
 				</div>
 				{% endif %}
 			{% endfor %}
@@ -95,9 +149,25 @@
 			<div class='panel'>
 			{% for item in menu_item %}
 				{% if item.category == "Salads" %}	
+				<div class='shop-product'>
 				<div class='dj-menu-item'>
 				<p class='menu-item-name'>{{ item.name }}</p>
 				<p class='menu-item-desc'>{{ item.description }} </p>
+				</div>
+				<div class='product-spacer'></div>
+				<div class='product-options-wrapper'>
+					{% for price in item.prices.all %}
+					<div class='product-options'>
+						<div class='product-size'>
+							<p>{{price.size}}</p>
+						</div>
+						<div class='product-price'>
+							<p>{{price.price}}</p>
+						</div>
+					</div>
+					{% endfor %}
+				</div>
+	
 				</div>
 				{% endif %}
 			{% endfor %}
@@ -108,9 +178,25 @@
 			<div class='panel'>
 			{% for item in menu_item %}
 				{% if item.category == "Soups" %}	
+				<div class='shop-product'>
 				<div class='dj-menu-item'>
 				<p class='menu-item-name'>{{ item.name }}</p>
 				<p class='menu-item-desc'>{{ item.description }} </p>
+				</div>
+				<div class='product-spacer'></div>
+				<div class='product-options-wrapper'>
+					{% for price in item.prices.all %}
+					<div class='product-options'>
+						<div class='product-size'>
+							<p>{{price.size}}</p>
+						</div>
+						<div class='product-price'>
+							<p>{{price.price}}</p>
+						</div>
+					</div>
+					{% endfor %}
+				</div>
+	
 				</div>
 				{% endif %}
 			{% endfor %}
@@ -121,9 +207,25 @@
 			<div class='panel'>
 			{% for item in menu_item %}
 				{% if item.category == "Calzones" %}	
+				<div class='shop-product'>
 				<div class='dj-menu-item'>
 				<p class='menu-item-name'>{{ item.name }}</p>
 				<p class='menu-item-desc'>{{ item.description }} </p>
+				</div>
+				<div class='product-spacer'></div>
+				<div class='product-options-wrapper'>
+					{% for price in item.prices.all %}
+					<div class='product-options'>
+						<div class='product-size'>
+							<p>{{price.size}}</p>
+						</div>
+						<div class='product-price'>
+							<p>{{price.price}}</p>
+						</div>
+					</div>
+					{% endfor %}
+				</div>
+	
 				</div>
 				{% endif %}
 			{% endfor %}
@@ -134,9 +236,25 @@
 			<div class='panel'>
 			{% for item in menu_item %}
 				{% if item.category == "Strombolis" %}	
+				<div class='shop-product'>
 				<div class='dj-menu-item'>
 				<p class='menu-item-name'>{{ item.name }}</p>
 				<p class='menu-item-desc'>{{ item.description }} </p>
+				</div>
+				<div class='product-spacer'></div>
+				<div class='product-options-wrapper'>
+					{% for price in item.prices.all %}
+					<div class='product-options'>
+						<div class='product-size'>
+							<p>{{price.size}}</p>
+						</div>
+						<div class='product-price'>
+							<p>{{price.price}}</p>
+						</div>
+					</div>
+					{% endfor %}
+				</div>
+	
 				</div>
 				{% endif %}
 			{% endfor %}
@@ -147,9 +265,25 @@
 			<div class='panel'>
 			{% for item in menu_item %}
 				{% if item.category == "Grinders" %}	
+				<div class='shop-product'>
 				<div class='dj-menu-item'>
 				<p class='menu-item-name'>{{ item.name }}</p>
 				<p class='menu-item-desc'>{{ item.description }} </p>
+				</div>
+				<div class='product-spacer'></div>
+				<div class='product-options-wrapper'>
+					{% for price in item.prices.all %}
+					<div class='product-options'>
+						<div class='product-size'>
+							<p>{{price.size}}</p>
+						</div>
+						<div class='product-price'>
+							<p>{{price.price}}</p>
+						</div>
+					</div>
+					{% endfor %}
+				</div>
+	
 				</div>
 				{% endif %}
 			{% endfor %}
@@ -160,9 +294,25 @@
 			<div class='panel'>
 			{% for item in menu_item %}
 				{% if item.category == "Wraps" %}	
+				<div class='shop-product'>
 				<div class='dj-menu-item'>
 				<p class='menu-item-name'>{{ item.name }}</p>
 				<p class='menu-item-desc'>{{ item.description }} </p>
+				</div>
+				<div class='product-spacer'></div>
+				<div class='product-options-wrapper'>
+					{% for price in item.prices.all %}
+					<div class='product-options'>
+						<div class='product-size'>
+							<p>{{price.size}}</p>
+						</div>
+						<div class='product-price'>
+							<p>{{price.price}}</p>
+						</div>
+					</div>
+					{% endfor %}
+				</div>
+	
 				</div>
 				{% endif %}
 			{% endfor %}
@@ -173,9 +323,25 @@
 			<div class='panel'>
 			{% for item in menu_item %}
 				{% if item.category == "Pasta Dishes" %}	
+				<div class='shop-product'>
 				<div class='dj-menu-item'>
 				<p class='menu-item-name'>{{ item.name }}</p>
 				<p class='menu-item-desc'>{{ item.description }} </p>
+				</div>
+				<div class='product-spacer'></div>
+				<div class='product-options-wrapper'>
+					{% for price in item.prices.all %}
+					<div class='product-options'>
+						<div class='product-size'>
+							<p>{{price.size}}</p>
+						</div>
+						<div class='product-price'>
+							<p>{{price.price}}</p>
+						</div>
+					</div>
+					{% endfor %}
+				</div>
+	
 				</div>
 				{% endif %}
 			{% endfor %}
@@ -186,9 +352,25 @@
 			<div class='panel'>
 			{% for item in menu_item %}
 				{% if item.category == "Entrees" %}	
+				<div class='shop-product'>
 				<div class='dj-menu-item'>
 				<p class='menu-item-name'>{{ item.name }}</p>
 				<p class='menu-item-desc'>{{ item.description }} </p>
+				</div>
+				<div class='product-spacer'></div>
+				<div class='product-options-wrapper'>
+					{% for price in item.prices.all %}
+					<div class='product-options'>
+						<div class='product-size'>
+							<p>{{price.size}}</p>
+						</div>
+						<div class='product-price'>
+							<p>{{price.price}}</p>
+						</div>
+					</div>
+					{% endfor %}
+				</div>
+	
 				</div>
 				{% endif %}
 			{% endfor %}
@@ -199,9 +381,25 @@
 			<div class='panel'>
 			{% for item in menu_item %}
 				{% if item.category == "Desserts" %}	
+				<div class='shop-product'>
 				<div class='dj-menu-item'>
 				<p class='menu-item-name'>{{ item.name }}</p>
 				<p class='menu-item-desc'>{{ item.description }} </p>
+				</div>
+				<div class='product-spacer'></div>
+				<div class='product-options-wrapper'>
+					{% for price in item.prices.all %}
+					<div class='product-options'>
+						<div class='product-size'>
+							<p>{{price.size}}</p>
+						</div>
+						<div class='product-price'>
+							<p>{{price.price}}</p>
+						</div>
+					</div>
+					{% endfor %}
+				</div>
+	
 				</div>
 				{% endif %}
 			{% endfor %}
@@ -212,9 +410,25 @@
 			<div class='panel'>
 			{% for item in menu_item %}
 				{% if item.category == "Extras" %}	
+				<div class='shop-product'>
 				<div class='dj-menu-item'>
 				<p class='menu-item-name'>{{ item.name }}</p>
 				<p class='menu-item-desc'>{{ item.description }} </p>
+				</div>
+				<div class='product-spacer'></div>
+				<div class='product-options-wrapper'>
+					{% for price in item.prices.all %}
+					<div class='product-options'>
+						<div class='product-size'>
+							<p>{{price.size}}</p>
+						</div>
+						<div class='product-price'>
+							<p>{{price.price}}</p>
+						</div>
+					</div>
+					{% endfor %}
+				</div>
+	
 				</div>
 				{% endif %}
 			{% endfor %}
@@ -225,9 +439,25 @@
 			<div class='panel'>
 			{% for item in menu_item %}
 				{% if item.category == "Beverages" %}	
+				<div class='shop-product'>
 				<div class='dj-menu-item'>
 				<p class='menu-item-name'>{{ item.name }}</p>
 				<p class='menu-item-desc'>{{ item.description }} </p>
+				</div>
+				<div class='product-spacer'></div>
+				<div class='product-options-wrapper'>
+					{% for price in item.prices.all %}
+					<div class='product-options'>
+						<div class='product-size'>
+							<p>{{price.size}}</p>
+						</div>
+						<div class='product-price'>
+							<p>{{price.price}}</p>
+						</div>
+					</div>
+					{% endfor %}
+				</div>
+	
 				</div>
 				{% endif %}
 			{% endfor %}	

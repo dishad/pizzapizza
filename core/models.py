@@ -45,21 +45,14 @@ class MenuItem(models.Model):
 	
 class Price(models.Model):
 	menuitem = models.ForeignKey(MenuItem, related_name='prices')
-	price = models.CharField(max_length=10, null=True, blank=True)
-
-class Size(models.Model):
-	menuitem = models.ForeignKey(MenuItem, related_name='sizes')
 	size = models.CharField(max_length=25, null=True, blank=True)
+	price = models.CharField(max_length=10, null=True, blank=True)
 
 class PriceInline(admin.StackedInline):
     model = Price
 
-class SizeInline(admin.StackedInline):
-	model = Size
-
 class MenuItemAdmin(admin.ModelAdmin):
     inlines = [
-		SizeInline,
 		PriceInline,
     ]
 

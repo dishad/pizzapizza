@@ -1,3 +1,12 @@
+.shop-product {
+	display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    border-bottom: 1px solid #e4e5e7;
+    font-size: 16px;
+    padding: 20px 0;
+}
+
 .food-header {
 	margin: 0;
 	display: inline-block;
@@ -11,14 +20,12 @@
 .accordion {
     color: #444;
     cursor: pointer;
-    width: 100%;
     text-align: left;
-    border: none;
+    border-bottom: 1px solid;
     outline: none;
     transition: 0.4s;
 	padding-top: 20px;
 	padding-bottom: 10px;
-    border-bottom: 1px solid;
 }
 	
 .accordion:after {
@@ -56,12 +63,19 @@
 }
 
 .dj-menu-item {
-    border-bottom: 1px solid #e4e5e7;
     padding: 20px 0;
 }
 
+.product-spacer {
+	-webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
+
 .product-options-wrapper {
-    cursor: pointer;
+	float: right;
+	cursor: pointer;
+	padding: 20px 0;
 }
 
 .product-options {
@@ -78,6 +92,7 @@
 }
 
 .product-size {
+	display: inline-block;
 	-webkit-box-flex: 1;
     -ms-flex: 1;
     flex: 1;
@@ -87,9 +102,9 @@
 }
 
 .product-price {
+	display: inline-block;
 	border-radius: 3px;
     cursor: pointer;
-    display: block;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 16px;
     height: 44px;
@@ -100,7 +115,6 @@
     text-align: center;
     text-decoration: none;
     background: #ffffff;
-    border: 1px solid #6b9ac0;
-    color: #6b9ac0;
+    border: 1px solid;
     width: 110px;
 }
