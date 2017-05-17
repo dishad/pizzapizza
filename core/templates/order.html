@@ -6,23 +6,23 @@
 
 {% block content %}
 	<div class='image-stripe'>
-	<!--	<div class='info-header'>
-			<h1 class='business-name order-name'>Ridgeway Pizza</h1>
-			<span class='business-address'>2802 Summer Street, Stamford CT, 06905 - 203-323-7777</span>
+		<div class='info-header'>
+			<span class='business-name order-name'>Ridgeway Pizza</span>
+			<span class='business-address'>2802 Summer Street, Stamford CT, 06905 | (203) 323-7777</span>
 		</div>
-	--!>
 		<div class='delivery-details-wrapper'>			
 			<div class='delivery-details'>
-				<span class='delivery-item'>30 - 45 min
-				<h4 class='delivery-desc'>Wait time</h4>
-				</span>
-				<span class='delivery-item'>$12 - $20
-				<h4 class='delivery-desc'>Minimum</h4>
-				</span>
-				<span class='delivery-item'>Free
-				<h4 class='delivery-desc'>Delivery</h4>
-				</span>
-				<span class='delivery-item delivery-number'>2802 Summer Street, Stamford CT, 06905 | (203) 323-7777</span>
+				<div class='delivery-item'>
+					<h4 class='delivery-desc'>30 - 45 min Wait time</h4>
+				</div>
+				<div class='delivery-item'>
+					<h4 class='delivery-desc'>$12 - $20 Minimum</h4>
+				</div>
+				<div class='delivery-item'>
+					<h4 class='delivery-desc'>Free Delivery</h4>
+				</div>
+				<!--<span class='delivery-item delivery-number'>2802 Summer Street, Stamford CT, 06905 | (203) 323-7777</span>
+				--!>
 			</div>
 		</div>
 	</div>
@@ -47,7 +47,7 @@
 							<p>{{price.size}}</p>
 						</div>
 						<div class='product-price'>
-							<p>{{price.price}}</p>
+							<p>${{price.price}}</p>
 						</div>
 					</div>
 					{% endfor %}
@@ -75,7 +75,7 @@
 							<p>{{price.size}}</p>
 						</div>
 						<div class='product-price'>
-							<p>{{price.price}}</p>
+							<p>${{price.price}}</p>
 						</div>
 					</div>
 					{% endfor %}
@@ -104,7 +104,7 @@
 							<p>{{price.size}}</p>
 						</div>
 						<div class='product-price'>
-							<p>{{price.price}}</p>
+							<p>${{price.price}}</p>
 						</div>
 					</div>
 					{% endfor %}
@@ -133,7 +133,7 @@
 							<p>{{price.size}}</p>
 						</div>
 						<div class='product-price'>
-							<p>{{price.price}}</p>
+							<p>${{price.price}}</p>
 						</div>
 					</div>
 					{% endfor %}
@@ -162,7 +162,7 @@
 							<p>{{price.size}}</p>
 						</div>
 						<div class='product-price'>
-							<p>{{price.price}}</p>
+							<p>${{price.price}}</p>
 						</div>
 					</div>
 					{% endfor %}
@@ -191,7 +191,7 @@
 							<p>{{price.size}}</p>
 						</div>
 						<div class='product-price'>
-							<p>{{price.price}}</p>
+							<p>${{price.price}}</p>
 						</div>
 					</div>
 					{% endfor %}
@@ -220,7 +220,7 @@
 							<p>{{price.size}}</p>
 						</div>
 						<div class='product-price'>
-							<p>{{price.price}}</p>
+							<p>${{price.price}}</p>
 						</div>
 					</div>
 					{% endfor %}
@@ -249,7 +249,7 @@
 							<p>{{price.size}}</p>
 						</div>
 						<div class='product-price'>
-							<p>{{price.price}}</p>
+							<p>${{price.price}}</p>
 						</div>
 					</div>
 					{% endfor %}
@@ -278,7 +278,7 @@
 							<p>{{price.size}}</p>
 						</div>
 						<div class='product-price'>
-							<p>{{price.price}}</p>
+							<p>${{price.price}}</p>
 						</div>
 					</div>
 					{% endfor %}
@@ -307,7 +307,7 @@
 							<p>{{price.size}}</p>
 						</div>
 						<div class='product-price'>
-							<p>{{price.price}}</p>
+							<p>${{price.price}}</p>
 						</div>
 					</div>
 					{% endfor %}
@@ -336,7 +336,7 @@
 							<p>{{price.size}}</p>
 						</div>
 						<div class='product-price'>
-							<p>{{price.price}}</p>
+							<p>${{price.price}}</p>
 						</div>
 					</div>
 					{% endfor %}
@@ -365,7 +365,7 @@
 							<p>{{price.size}}</p>
 						</div>
 						<div class='product-price'>
-							<p>{{price.price}}</p>
+							<p>${{price.price}}</p>
 						</div>
 					</div>
 					{% endfor %}
@@ -394,7 +394,7 @@
 							<p>{{price.size}}</p>
 						</div>
 						<div class='product-price'>
-							<p>{{price.price}}</p>
+							<p>${{price.price}}</p>
 						</div>
 					</div>
 					{% endfor %}
@@ -423,7 +423,7 @@
 							<p>{{price.size}}</p>
 						</div>
 						<div class='product-price'>
-							<p>{{price.price}}</p>
+							<p>${{price.price}}</p>
 						</div>
 					</div>
 					{% endfor %}
@@ -452,7 +452,7 @@
 							<p>{{price.size}}</p>
 						</div>
 						<div class='product-price'>
-							<p>{{price.price}}</p>
+							<p>${{price.price}}</p>
 						</div>
 					</div>
 					{% endfor %}
@@ -463,7 +463,57 @@
 			{% endfor %}	
 			</div>
 		</div>
-		<div class='cart-content'>
+		<div class='cart-wrapper'>
+			<div class='shopping-cart'>
+				<h3 class='cart-header'>Your Cart</h3>
+				<div>Enter a new location</div>
+				<div class='cart-object'>
+					<label>This order is for</label>
+					<div>
+						<label>
+							<input type='radio' name='shipping_type' id='shipping_type_delivery' value='delivery' checked='checked'>
+							<span>Delivery</span>
+						</label>
+						<label>
+							<input type='radio' name='shipping_type' id='shipping_type_pickup' value='pickup'>
+							<span>Pickup</span>
+						</label>
+					</div>
+				</div>
+				<div class='cart-object'>
+					<label>Delivery time</label>
+					<div>
+						<label>
+							<input type='radio' name='delivery_time' id='whendelivery' value='ASAP' checked='checked'>
+							<span>Now</span>
+						</label>
+						<label>
+							<input type='radio' name='delivery_time' id='delivery_time_timedate' value='timedate'>
+							<span>Later</span>
+						</label>
+					</div>
+				</div>
+				<div>
+					<div>
+						<label>Subtotal</label>
+						<p>$0.00</p>
+					</div>
+					<div>
+						<label>Tax</label>
+						<p>$0.00</p>
+					</div>
+					<div>
+						<label>
+							<span>Delivery Fee</span>
+						</label>
+						<p>Free</p>
+					</div>
+					<div>
+						<label>Total</label>
+						<p>$0.00</p>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 	<link rel='stylesheet' type='text/css' href="{% static 'css/index.css' %}"/>

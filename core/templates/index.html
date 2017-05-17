@@ -5,13 +5,19 @@
 {% block title %}Home | {{ block.super }}{% endblock %}
 
 {% block content %}
-	<div class='header-wrapper b_header'>
+	<!---<div class='header-wrapper b_header'>
 		<div class='inner-header-wrapper'>
 			<p class='business-address'>2802 Summer Street, Stamford CT, 06905</p>
-			<a class='header-button' href='/order'>Full Menu</a>
 		</div>
+	</div> --!>
+
+	<div class='stripe-image'>
+		<div class='info-header homepage-header'>
+            <span class='business-name order-name'>Ridgeway Pizza</span>
+            <span class='business-address'>2802 Summer Street, Stamford CT, 06905 | (203) 323-7777</span>
+			<a class='header-button' href='/order'>Full Menu</a>
+        </div>
 	</div>
-	<div class='stripe-image'></div>
 	<div class='business-content'>
 			<div class='popular-items'>
 				<h2 class='popular-items-header'>Most Popular</h2>
