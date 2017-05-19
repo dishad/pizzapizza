@@ -58,7 +58,7 @@ html, body, article {
 }
 
 .business-name {
-	font-family: 'Oswald', sans-serif;    
+	font-family: 'Oswald', sans-serif;
     text-transform: uppercase;
     font-size: 110px;
     margin-bottom: 5px;
@@ -74,7 +74,7 @@ html, body, article {
 }
 
 .business-address {
-	font-family: 'Oswald', sans-serif;    
+	font-family: 'Oswald', sans-serif;
     font-size: 26px;
     line-height: 16px;
 }
@@ -107,7 +107,7 @@ html, body, article {
     background-color: transparent;
     border: solid #fff 2px;
     cursor: pointer !important;
-	-webkit-box-pack: center; 
+	-webkit-box-pack: center;
     -webkit-justify-content: center;
     justify-content: center;
 	transition: border-color 0.4s ease 0s, background-color 0.4s ease 0s;
@@ -148,7 +148,7 @@ html, body, article {
 	cursor: pointer;
     display: block;
     font-size: 36px;
-	font-family: 'Oswald', sans-serif;    
+	font-family: 'Oswald', sans-serif;
 	border-radius: 10px;
     height: 88px;
     line-height: 2.5;
@@ -189,7 +189,7 @@ html, body, article {
 }
 
 .popular-items-header {
-	font-family: 'Oswald', sans-serif;    
+	font-family: 'Oswald', sans-serif;
 	-webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     letter-spacing: 1.5px;
@@ -218,7 +218,7 @@ html, body, article {
 }
 
 div {
-	display: block;	
+	display: block;
 }
 
 .make-order:hover {
@@ -289,10 +289,10 @@ div {
 }
 
 .info-header {
-	font-family: 'Oswald', sans-serif;    
+	font-family: 'Oswald', sans-serif;
     text-align: center;
 	color: #fff;
-}	
+}
 
 .delivery-details {
 	padding: 12px 0px;
@@ -322,7 +322,7 @@ div {
 .delivery-desc {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-	font-family: 'Oswald', sans-serif;    
+	font-family: 'Oswald', sans-serif;
     text-transform: uppercase;
     color: #fff;
     font-size: 25px;
@@ -337,6 +337,17 @@ div {
 
 .order-name {
 	margin-bottom: 20px;
+	-ms-user-select: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	user-select: none;
+	text-decoration: none;
+	color: #fff;
+}
+
+a:hover {
+	text-decoration: none;
+	color: #fff;
 }
 
 .shop-content {
@@ -349,7 +360,7 @@ div {
     -webkit-box-pack: justify;
     justify-content: space-between;
     margin: 20px auto;
-	padding: 0 150px;
+		padding: 0 250px;
 }
 
 .menu-items {
@@ -357,7 +368,6 @@ div {
     -webkit-flex: 2 650px;
     -ms-flex: 2 650px;
     flex: 2 650px;
-	margin-right: 100px;
 }
 
 ol, li, ul {

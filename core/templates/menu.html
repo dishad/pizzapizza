@@ -2,15 +2,15 @@
 
 {% load static %}
 
-{% block title %}Order | {{ block.super }}{% endblock %}
+{% block title %}Menu | {{ block.super }}{% endblock %}
 
 {% block content %}
 	<div class='image-stripe'>
 		<div class='info-header'>
-			<span class='business-name order-name'>Ridgeway Pizza</span>
+			<a class='business-name order-name' href="{% url 'index' %}">Ridgeway Pizza</a>
 			<span class='business-address'>2802 Summer Street, Stamford CT, 06905 | (203) 323-7777</span>
 		</div>
-		<div class='delivery-details-wrapper'>			
+		<div class='delivery-details-wrapper'>
 			<div class='delivery-details'>
 				<div class='delivery-item'>
 					<h4 class='delivery-desc'>30 - 45 min Wait time</h4>
@@ -21,8 +21,6 @@
 				<div class='delivery-item'>
 					<h4 class='delivery-desc'>Free Delivery</h4>
 				</div>
-				<!--<span class='delivery-item delivery-number'>2802 Summer Street, Stamford CT, 06905 | (203) 323-7777</span>
-				--!>
 			</div>
 		</div>
 	</div>
@@ -33,7 +31,7 @@
 			</div>
 			<div class='panel'>
 			{% for item in menu_item %}
-				{% if item.category == "Pizza" %}	
+				{% if item.category == "Pizza" %}
 				<div class='shop-product'>
 				<div class='dj-menu-item'>
 				<p class='menu-item-name'>{{ item.name }}</p>
@@ -50,6 +48,27 @@
 							<p>${{price.price}}</p>
 						</div>
 					</div>
+					{% endfor %}
+				</div>
+				</div>
+				{% endif %}
+			{% endfor %}
+			</div>
+			<div class='accordion'>
+				<h3 class='food-header'>Toppings</h3>
+			</div>
+			<div class='panel'>
+			{% for item in menu_item %}
+				{% if item.category == "Toppings" %}
+				<div class='shop-product'>
+				<div class='dj-menu-item'>
+				<p class='menu-item-name'>{{ item.name }}</p>
+				<p class='menu-item-desc'>{{ item.description }} </p>
+				</div>
+				<div class='spacer'></div>
+				<div style='width:350px'>
+					{% for price in item.prices.all %}
+						<p class='toppings'>{{price.size}}</p>
 					{% endfor %}
 				</div>
 				</div>
@@ -61,7 +80,7 @@
 			</div>
 			<div class='panel'>
 			{% for item in menu_item %}
-				{% if item.category == "Gourmet Pizzas" %}	
+				{% if item.category == "Gourmet Pizzas" %}
 				<div class='shop-product'>
 				<div class='dj-menu-item'>
 				<p class='menu-item-name'>{{ item.name }}</p>
@@ -80,7 +99,7 @@
 					</div>
 					{% endfor %}
 				</div>
-	
+
 				</div>
 				{% endif %}
 			{% endfor %}
@@ -90,7 +109,7 @@
 			</div>
 			<div class='panel'>
 			{% for item in menu_item %}
-				{% if item.category == "Appetizers" %}	
+				{% if item.category == "Appetizers" %}
 				<div class='shop-product'>
 				<div class='dj-menu-item'>
 				<p class='menu-item-name'>{{ item.name }}</p>
@@ -109,7 +128,7 @@
 					</div>
 					{% endfor %}
 				</div>
-	
+
 				</div>
 				{% endif %}
 			{% endfor %}
@@ -119,7 +138,7 @@
 			</div>
 			<div class='panel'>
 			{% for item in menu_item %}
-				{% if item.category == "Wings" %}	
+				{% if item.category == "Wings" %}
 				<div class='shop-product'>
 				<div class='dj-menu-item'>
 				<p class='menu-item-name'>{{ item.name }}</p>
@@ -138,7 +157,7 @@
 					</div>
 					{% endfor %}
 				</div>
-	
+
 				</div>
 				{% endif %}
 			{% endfor %}
@@ -148,7 +167,7 @@
 			</div>
 			<div class='panel'>
 			{% for item in menu_item %}
-				{% if item.category == "Salads" %}	
+				{% if item.category == "Salads" %}
 				<div class='shop-product'>
 				<div class='dj-menu-item'>
 				<p class='menu-item-name'>{{ item.name }}</p>
@@ -167,7 +186,7 @@
 					</div>
 					{% endfor %}
 				</div>
-	
+
 				</div>
 				{% endif %}
 			{% endfor %}
@@ -177,7 +196,7 @@
 			</div>
 			<div class='panel'>
 			{% for item in menu_item %}
-				{% if item.category == "Soups" %}	
+				{% if item.category == "Soups" %}
 				<div class='shop-product'>
 				<div class='dj-menu-item'>
 				<p class='menu-item-name'>{{ item.name }}</p>
@@ -196,7 +215,7 @@
 					</div>
 					{% endfor %}
 				</div>
-	
+
 				</div>
 				{% endif %}
 			{% endfor %}
@@ -206,7 +225,7 @@
 			</div>
 			<div class='panel'>
 			{% for item in menu_item %}
-				{% if item.category == "Calzones" %}	
+				{% if item.category == "Calzones" %}
 				<div class='shop-product'>
 				<div class='dj-menu-item'>
 				<p class='menu-item-name'>{{ item.name }}</p>
@@ -225,7 +244,7 @@
 					</div>
 					{% endfor %}
 				</div>
-	
+
 				</div>
 				{% endif %}
 			{% endfor %}
@@ -235,7 +254,7 @@
 			</div>
 			<div class='panel'>
 			{% for item in menu_item %}
-				{% if item.category == "Strombolis" %}	
+				{% if item.category == "Strombolis" %}
 				<div class='shop-product'>
 				<div class='dj-menu-item'>
 				<p class='menu-item-name'>{{ item.name }}</p>
@@ -254,7 +273,7 @@
 					</div>
 					{% endfor %}
 				</div>
-	
+
 				</div>
 				{% endif %}
 			{% endfor %}
@@ -264,7 +283,7 @@
 			</div>
 			<div class='panel'>
 			{% for item in menu_item %}
-				{% if item.category == "Grinders" %}	
+				{% if item.category == "Grinders" %}
 				<div class='shop-product'>
 				<div class='dj-menu-item'>
 				<p class='menu-item-name'>{{ item.name }}</p>
@@ -283,7 +302,7 @@
 					</div>
 					{% endfor %}
 				</div>
-	
+
 				</div>
 				{% endif %}
 			{% endfor %}
@@ -293,7 +312,7 @@
 			</div>
 			<div class='panel'>
 			{% for item in menu_item %}
-				{% if item.category == "Wraps" %}	
+				{% if item.category == "Wraps" %}
 				<div class='shop-product'>
 				<div class='dj-menu-item'>
 				<p class='menu-item-name'>{{ item.name }}</p>
@@ -312,7 +331,7 @@
 					</div>
 					{% endfor %}
 				</div>
-	
+
 				</div>
 				{% endif %}
 			{% endfor %}
@@ -322,7 +341,7 @@
 			</div>
 			<div class='panel'>
 			{% for item in menu_item %}
-				{% if item.category == "Pasta Dishes" %}	
+				{% if item.category == "Pasta Dishes" %}
 				<div class='shop-product'>
 				<div class='dj-menu-item'>
 				<p class='menu-item-name'>{{ item.name }}</p>
@@ -341,7 +360,7 @@
 					</div>
 					{% endfor %}
 				</div>
-	
+
 				</div>
 				{% endif %}
 			{% endfor %}
@@ -351,7 +370,7 @@
 			</div>
 			<div class='panel'>
 			{% for item in menu_item %}
-				{% if item.category == "Entrees" %}	
+				{% if item.category == "Entrees" %}
 				<div class='shop-product'>
 				<div class='dj-menu-item'>
 				<p class='menu-item-name'>{{ item.name }}</p>
@@ -370,7 +389,7 @@
 					</div>
 					{% endfor %}
 				</div>
-	
+
 				</div>
 				{% endif %}
 			{% endfor %}
@@ -380,7 +399,7 @@
 			</div>
 			<div class='panel'>
 			{% for item in menu_item %}
-				{% if item.category == "Desserts" %}	
+				{% if item.category == "Desserts" %}
 				<div class='shop-product'>
 				<div class='dj-menu-item'>
 				<p class='menu-item-name'>{{ item.name }}</p>
@@ -399,7 +418,7 @@
 					</div>
 					{% endfor %}
 				</div>
-	
+
 				</div>
 				{% endif %}
 			{% endfor %}
@@ -409,7 +428,7 @@
 			</div>
 			<div class='panel'>
 			{% for item in menu_item %}
-				{% if item.category == "Extras" %}	
+				{% if item.category == "Extras" %}
 				<div class='shop-product'>
 				<div class='dj-menu-item'>
 				<p class='menu-item-name'>{{ item.name }}</p>
@@ -428,7 +447,7 @@
 					</div>
 					{% endfor %}
 				</div>
-	
+
 				</div>
 				{% endif %}
 			{% endfor %}
@@ -438,7 +457,7 @@
 			</div>
 			<div class='panel'>
 			{% for item in menu_item %}
-				{% if item.category == "Beverages" %}	
+				{% if item.category == "Beverages" %}
 				<div class='shop-product'>
 				<div class='dj-menu-item'>
 				<p class='menu-item-name'>{{ item.name }}</p>
@@ -457,67 +476,14 @@
 					</div>
 					{% endfor %}
 				</div>
-	
+
 				</div>
 				{% endif %}
-			{% endfor %}	
-			</div>
-		</div>
-		<div class='cart-wrapper'>
-			<div class='shopping-cart'>
-				<h3 class='cart-header'>Your Cart</h3>
-				<div>Enter a new location</div>
-				<div class='cart-object'>
-					<label>This order is for</label>
-					<div>
-						<label>
-							<input type='radio' name='shipping_type' id='shipping_type_delivery' value='delivery' checked='checked'>
-							<span>Delivery</span>
-						</label>
-						<label>
-							<input type='radio' name='shipping_type' id='shipping_type_pickup' value='pickup'>
-							<span>Pickup</span>
-						</label>
-					</div>
-				</div>
-				<div class='cart-object'>
-					<label>Delivery time</label>
-					<div>
-						<label>
-							<input type='radio' name='delivery_time' id='whendelivery' value='ASAP' checked='checked'>
-							<span>Now</span>
-						</label>
-						<label>
-							<input type='radio' name='delivery_time' id='delivery_time_timedate' value='timedate'>
-							<span>Later</span>
-						</label>
-					</div>
-				</div>
-				<div>
-					<div>
-						<label>Subtotal</label>
-						<p>$0.00</p>
-					</div>
-					<div>
-						<label>Tax</label>
-						<p>$0.00</p>
-					</div>
-					<div>
-						<label>
-							<span>Delivery Fee</span>
-						</label>
-						<p>Free</p>
-					</div>
-					<div>
-						<label>Total</label>
-						<p>$0.00</p>
-					</div>
-				</div>
+			{% endfor %}
 			</div>
 		</div>
 	</div>
 	<link rel='stylesheet' type='text/css' href="{% static 'css/index.css' %}"/>
-	<link rel='stylesheet' type='text/css' href="{% static 'css/order.css' %}"/>
+	<link rel='stylesheet' type='text/css' href="{% static 'css/menu.css' %}"/>
 	<script src="{% static 'scripts/main.js' %}"></script>
 {% endblock %}
-

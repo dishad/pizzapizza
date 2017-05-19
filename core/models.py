@@ -6,6 +6,7 @@ from django.contrib import admin
 class MenuItem(models.Model):
 	PZ = 'Pizza'
 	GP = 'Gourmet Pizzas'
+	TP = 'Toppings'
 	AP = 'Appetizers'
 	WI = 'Wings'
 	SA = 'Salads'
@@ -19,10 +20,11 @@ class MenuItem(models.Model):
 	DE = 'Desserts'
 	EX = 'Extras'
 	BE = 'Beverages'
-	
+
 	categories = (
 		(PZ, 'Pizza'),
 		(GP, 'Gourmet Pizza'),
+		(TP, 'Topping'),
 		(AP, 'Appetizer'),
 		(WI, 'Wings'),
 		(SA, 'Salad'),
@@ -39,10 +41,10 @@ class MenuItem(models.Model):
 	)
 	name = models.CharField(max_length=50)
 	description = models.CharField(max_length=250, null=True, blank=True)
-	category = models.CharField(max_length=15, choices=categories, default=PZ) 
+	category = models.CharField(max_length=15, choices=categories, default=PZ)
 	def __str__(self):
    		return self.category + ' Item: ' + self.name
-	
+
 class Price(models.Model):
 	menuitem = models.ForeignKey(MenuItem, related_name='prices')
 	size = models.CharField(max_length=25, null=True, blank=True)

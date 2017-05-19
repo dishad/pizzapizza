@@ -9,10 +9,9 @@ from core.models import *
 def index(request):
 	return render(request, 'index.html')
 
-def order(request):
+def menu(request):
 	menu_item = MenuItem.objects.all()
 	context = {
 		'menu_item': menu_item
 	}
-	return render(request, 'order.html', context)
-
+	return render(request, 'menu.html', context)

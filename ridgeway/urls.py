@@ -18,10 +18,10 @@ from django.conf.urls import include, url
 from django.contrib import admin, auth
 from django.views.generic.base import TemplateView
 
-import core.views
+from core import views as ridgeway
 
 urlpatterns = [
-	url(r'^$', core.views.index),
-	url(r'^order/', core.views.order),
-    url(r'^admin/', admin.site.urls)
+	url(r'^$', ridgeway.index, name='index'),
+	url(r'^menu/', ridgeway.menu, name='menu'),
+    url(r'^admin/', admin.site.urls, name='admin')
 ]

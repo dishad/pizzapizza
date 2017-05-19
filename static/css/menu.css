@@ -27,27 +27,26 @@
 	padding-top: 20px;
 	padding-bottom: 10px;
 }
-	
+
 .accordion:after {
-    content: '\02796'; /* Unicode character for "plus" sign (+) */
-    font-size: 24px;
+    content: '\2795'; /* Unicode character for "plus" sign (+) */
+    font-size: 22px;
     color: #777;
     float: right;
     margin-left: 5px;
-	display: inline-block;
 }
 
 .accordion.active:after {
-    content: "\2795"; /* Unicode character for "minus" sign (-) */
+    content: '\2796'; /* Unicode character for "minus" sign (-) */
 }
 .panel {
     margin-top: 10px;
-	background-color: white;
-    display: block;
+		background-color: white;
+    display: none;
 }
 
 .panel.show {
-	display: none!important;
+	display: block!important;
 }
 
 .menu-item-name {
@@ -142,4 +141,14 @@
 	border-bottom: 1px solid;
 	padding: 10px 0;
 	margin: 5px 0 0;
+}
+
+.toppings {
+	padding-right: 7px;
+	display: inline;
+	font-size: 18px
+}
+
+.spacer {
+	width: 300px;
 }

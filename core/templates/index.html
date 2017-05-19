@@ -5,42 +5,44 @@
 {% block title %}Home | {{ block.super }}{% endblock %}
 
 {% block content %}
-	<!---<div class='header-wrapper b_header'>
-		<div class='inner-header-wrapper'>
-			<p class='business-address'>2802 Summer Street, Stamford CT, 06905</p>
-		</div>
-	</div> --!>
-
 	<div class='stripe-image'>
 		<div class='info-header homepage-header'>
-            <span class='business-name order-name'>Ridgeway Pizza</span>
+            <a class='business-name order-name' href="{% url 'menu' %}">Ridgeway Pizza</a>
             <span class='business-address'>2802 Summer Street, Stamford CT, 06905 | (203) 323-7777</span>
-			<a class='header-button' href='/order'>Full Menu</a>
+			<a class='header-button' href="{% url 'menu' %}">Full Menu</a>
         </div>
 	</div>
 	<div class='business-content'>
 			<div class='popular-items'>
 				<h2 class='popular-items-header'>Most Popular</h2>
-				<a class='popular-item-wrapper' href='/order'>
+				<a class='popular-item-wrapper' href="{% url 'menu' %}">
 					<h3 class='popular-header'>Cheese Pizza</h3>
 					<p class='popular-item-desc'>Classic cheese or create your own pizza.</p>
 				</a>
-				<a class='popular-item-wrapper' href='/order'>
+				<a class='popular-item-wrapper' href="{% url 'menu' %}">
 					<h3 class='popular-header'>Sicilian Cheese Pizza</h3>
 					<p class='popular-item-desc'>Classic cheese or create your own sicilian pizza.</p>
 				</a>
-				<a class='popular-item-wrapper' href='/order'>
-					<h3 class='popular-header'>Beef Patty</h3>
+				<a class='popular-item-wrapper' href="{% url 'menu' %}">
+					<h3 class='popular-header'>Fried Wings</h3>
+          <p class='popular-item-desc'>Served with a side of celery and blue cheese or ranch dressing.</p>
+				</a>
+        <a class='popular-item-wrapper' href="{% url 'menu' %}">
+					<h3 class='popular-header'>Steak and Cheese Grinder</h3>
+					<p class='popular-item-desc'>With onions and green peppers.</p>
+				</a>
+        <a class='popular-item-wrapper' href="{% url 'menu' %}">
+					<h3 class='popular-header'>Garlic Knots</h3>
 				</a>
 			</div>
-		
+
 			<div class='business-details'>
-				<a class='make-order' href='/order'>Make an Order</a>
+				<a class='make-order' href="{% url 'menu' %}">View Menu</a>
 				<ul>
 					<li class='weekly-schedule list-item'>
 					<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 18 18' class='list-icon'>
 						<path class="path1" d="M10.293 11.707l-3.293-3.293v-4.414h2v3.586l2.707 2.707zM8 0c-4.418 0-8 3.582-8 8s3.582 8 8 8 8-3.582 8-8-3.582-8-8-8zM8 14c-3.314 0-6-2.686-6-6s2.686-6 6-6c3.314 0 6 2.686 6 6s-2.686 6-6 6z"></path>
-					</svg>	
+					</svg>
 					Business Hours:
 						<ul class='weekly-schedule-list'>
 							<li class='list-item'>
@@ -49,7 +51,7 @@
 							</li>
 							<li class='list-item'>
 								<span class='business-day'>Monday</span>
-								<span class='business-time'>11:00AM - 10:00PM</span>	
+								<span class='business-time'>11:00AM - 10:00PM</span>
 							</li>
 							<li class='list-item'>
 								<span class='business-day'>Tuesday</span>
